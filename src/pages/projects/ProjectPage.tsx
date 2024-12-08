@@ -1,11 +1,14 @@
 import React from "react";
+import PageContainer from "../../components/page-container/PageContainer";
 
 const ProjectPage = () => {
     return (
-        <main>
-            <h1>Hello</h1>
-            <h1>Test</h1>
-        </main>
+        <PageContainer>
+            <main>
+                <h1>Hello</h1>
+                <h1>Test</h1>
+            </main>
+        </PageContainer>
     )
 }
 

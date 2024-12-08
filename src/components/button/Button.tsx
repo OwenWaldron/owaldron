@@ -12,7 +12,7 @@ type ButtonProps = {
 };
 
 const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, newTab = false }) => {
-    let modifier = '';
+    let modifier = 'text-white  bg-owaldron-blue';
 
     if (variant === 'hollow') {
         modifier = 'bg-none border-4 border-owaldron-blue text-owaldron-blue';
@@ -22,7 +22,7 @@ const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, new
         <a href={href}
             target={newTab ? '_blank' : undefined}
             rel={newTab ? 'noreferrer' : undefined}
-            className={'hoverin w-full flex items-center justify-center py-2 rounded-md text-white font-semibold bg-owaldron-blue' + modifier}
+            className={'hoverin w-full flex items-center justify-center py-2 rounded-md font-semibold ' + modifier}
         >
             {label}
         </a>
