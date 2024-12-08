@@ -10,6 +10,8 @@ interface Taggable {
    date: string;
    tag: string;
    description: string;
+   link?: string;
+   image?: string;
 }
 
 const educationHistory: Taggable[] = [
@@ -29,6 +31,25 @@ const educationHistory: Taggable[] = [
 
 const workHistory: Taggable[] = [
    {
+      title: 'Junior Developer',
+      date: 'Sep 2024 - Dec 2024',
+      tag: 'MarquesCG',
+      description: `
+Created reusable GitHub actions and template repositories to pioneer continuous deployment pipeline to Kubernetes.
+Developed company website in Svelte and video conference speaker analysis tools using FastAPI and ReactJS
+Established frameworks for analysis of model accuracy and program efficiency to improve existing applications.
+`
+   },{
+      title: 'Software Developer',
+      date: 'Dec 2023 - May 2024',
+      tag: 'Marsh McLennan',
+      description: `
+Developed internal workflow automation software as part of an Agile software development team &nbws
+Collaborated with UX team to engineer a reusable React component library for internal use
+Assembled technical documentation breaking down the integration and data architecture of various applications
+Experimented with using generative AI to transform natural language into Camunda business process models by developing a proof of concept application.
+`
+   },{
       title: 'Course Marker',
       date: 'Sep 2023 - Dec 2023',
       tag: 'University of Waterloo, Faculty of Mathematics',
