@@ -1,0 +1,8 @@
+
+.hoverin {
+    transition: filter 0.5s ease-in-out;
+}
+
+.hoverin:hover {
+    filter: brightness(0.8);
+}

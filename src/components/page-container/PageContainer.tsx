@@ -1,14 +1,14 @@
-import React, { ReactNode } from "react";
+import React, { FC, ReactNode } from "react";
 import Header from "../header/Header";
 
 type ContainerProps = {
     children: ReactNode;
 };
 
-const PageContainer: React.FC<ContainerProps> = ({ children }) => {
+const PageContainer: FC<ContainerProps> = ({ children }) => {
     return (<>
         <Header />
-        <div className="mx-auto max-w-[1120px]" >
+        <div className="center" >
             {children}
         </div>
     </>);

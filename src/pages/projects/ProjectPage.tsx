@@ -1,7 +1,12 @@
 import React from "react";
 
 const ProjectPage = () => {
-    return <h1>Hello, Projects!</h1>
+    return (
+        <main>
+            <h1>Hello</h1>
+            <h1>Test</h1>
+        </main>
+    )
 }
 
 export default ProjectPage;
