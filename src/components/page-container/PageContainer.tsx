@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import Header from "../header/Header";
+import Footer from "../footer/Footer";
 import { useLocation } from "react-router-dom";
 import styles from './PageContainer.module.css';
 
@@ -19,6 +20,7 @@ const PageContainer: FC<ContainerProps> = ({ children }) => {
             <div className="center" >
                 {children}
             </div>
+            <Footer />
         </article>
     );
 };

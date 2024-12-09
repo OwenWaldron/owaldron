@@ -3,12 +3,12 @@ import PageContainer from "../../components/page-container/PageContainer";
 import projects, { Project } from '../../content/projects/projects';
 import Box from "../../components/box/Box";
 import styles from './ProjectPage.module.css';
-import { useAsyncError, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProjectPage = () => {
     return (
         <PageContainer>
-            <main className="flex gap-8 md:flex-row flex-col flex-wrap items-center mb-24">
+            <main className="flex gap-8 md:flex-row flex-col flex-wrap items-center">
                 {projects.map((proj, i) => <ProjectCard key={i} project={proj} />)}
             </main>
         </PageContainer>

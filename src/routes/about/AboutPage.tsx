@@ -10,7 +10,7 @@ import PageContainer from "../../components/page-container/PageContainer";
 const AboutPage = () => {
     return (
         <PageContainer>
-            <div className="flex flex-col gap-8 mb-24">
+            <div className="flex flex-col gap-8">
                 <Box>
                     <div className="flex justify-between gap-8">
                         <div className="flex flex-col w-full">

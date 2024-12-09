@@ -17,17 +17,17 @@ const ProjectView = () => {
 
     return (
         <PageContainer>
-            <Box className="pt-6 mb-24">
+            <Box className="pt-6">
                 <Link className="underline" to="/projects">
                     {"< Projects"}
                 </Link>
                 <div className="flex flex-col items-center">
-                    <h1 className="mb-4">{project.name}</h1>
+                    <h2 className="mb-4 text-3xl font-bold">{project.name}</h2>
                     <img className="w-[42rem] md:h-[26rem] object-cover rounded-md border-card-border-gray border-4" src={project.images[0]} alt="" />
                     <div className="flex mt-6 gap-8 md:flex-row flex-col">
                         <div>
                             <h2 className="font-bold text-lg mb-2">Description</h2>
-                            <p >{project.description}</p>
+                            <p>{project.description}</p>
                         </div>
                         <div className="flex flex-col min-w-56">
                             <h2 className="font-bold text-lg mb-2">Technologies</h2>
