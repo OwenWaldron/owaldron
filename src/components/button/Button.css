@@ -1,8 +1,9 @@
 
 .hoverin {
-    transition: filter 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .hoverin:hover {
     filter: brightness(0.8);
+    transform: scale(1.03);
 }

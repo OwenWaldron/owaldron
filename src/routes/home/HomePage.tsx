@@ -18,7 +18,7 @@ const HomePage = () => {
     }
 
     return (
-        <div className={"flex flex-col items-center text-white martian-mono md:gap-24 gap-12 pt-24 " + (faded && styles['fade-out'])}>
+        <div className={"flex flex-col items-center text-white martian-mono md:gap-24 gap-12 pt-24 " + (faded ? 'opacity-0 ' + styles['fade-out'] : '')}>
             <div className='flex flex-col items-center md:mt-8 mt-2 '>
                 <img className='md:max-w-96 max-w-32 md:pb-2 pb-1' src={Owen} alt='' />
                 <h1 className='text-3xl text-white'>Owen Waldron</h1>
