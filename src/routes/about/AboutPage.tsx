@@ -3,8 +3,8 @@ import Box from "../../components/box/Box";
 import Owen from '../../assets/images/saycheese.png';
 import Button from "../../components/button/Button";
 
-import { aboutMeText, Taggable, educationHistory, workHistory } from "../../content/about";
-import Resume from '../../content/Waldron_Owen_Resume.pdf';
+import { aboutMeText, Taggable, educationHistory, workHistory } from "../../content/about/about";
+import Resume from '../../content/about/Waldron_Owen_Resume.pdf';
 import PageContainer from "../../components/page-container/PageContainer";
 
 const AboutPage = () => {
