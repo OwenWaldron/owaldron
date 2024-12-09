@@ -9,8 +9,5 @@ The `content` folder in `src` houses all the content for the page, and are sorte
 ## TODOs
 
 - Add logbook.
-- Add footer.
 - Add carousel for project photos.
-- Add posthog activity logging.
-- Add favicon
 - Add icons & links to education/work experience
