@@ -6,10 +6,10 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer className='w-full flex justify-center py-12 gap-4'>
-            <a className='bg-owaldron-blue' href='https://github.com/OwenWaldron' >
+            <a target='_blank' rel='noreferrer' className='bg-owaldron-blue' href='https://github.com/OwenWaldron' >
                 <img src={Github} alt='Github' className=' invert-1' />
             </a>
-            <a className='bg-owaldron-blue' href='https://www.linkedin.com/in/owaldron/' >
+            <a  target='_blank' rel='noreferrer' className='bg-owaldron-blue' href='https://www.linkedin.com/in/owaldron/' >
                 <img src={LinkedIn} alt='LinkedIn' />
             </a>
         </footer>
