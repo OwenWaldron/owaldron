@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import './Button.css';
+import posthog from "posthog-js";
 
 type ButtonTypes = 'filled' | 'hollow';
 
@@ -20,6 +21,7 @@ const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, new
 
     if (href) return(
         <a href={href}
+            onClick={() => {posthog.capture(`Clicked button "${label}"`)}}
             target={newTab ? '_blank' : undefined}
             rel={newTab ? 'noreferrer' : undefined}
             className={'hoverin w-full flex items-center justify-center py-2 rounded-md font-semibold ' + modifier}

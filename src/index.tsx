@@ -7,6 +7,7 @@ import { PostHogProvider} from 'posthog-js/react'
 
 const options = {
   api_host: process.env.REACT_APP_PUBLIC_POSTHOG_HOST,
+  capture_pageview: false
 }
 
 const root = ReactDOM.createRoot(
