@@ -13,10 +13,10 @@ const Box: FC<BoxProps> = ({
     manualPadding = false,
     onClick
 }) => {
-    const paddingClass = " py-10 md:px-16 px-8 ";
-    const baseClass = "w-full bg-card-gray rounded-md border-card-border-gray border-[3px] " 
-    return <div onClick={onClick} className={baseClass + (manualPadding ? '' : paddingClass) + className} >
-        {children}
+    return <div onClick={onClick} className={"w-full bg-card-bg border-card-border border-[2px] p-2 " + className} >
+        <div className="w-full h-full border-card-border border-[2px]">
+            {children}
+        </div>
     </div>
 };
 
