@@ -24,10 +24,10 @@ const HomePage = () => {
                 <h1 className='text-3xl text-white'>Owen Waldron</h1>
             </div>
             <div className='flex md:text-2xl text-xl md:justify-between md:min-w-[800px] items-center md:flex-row flex-col min-w-full gap-6'>
-                <button className="hover-underline" onClick={handleClick('/projects')} >
+                <button className="hover-underline text-3xl jersey-20" onClick={handleClick('/projects')} >
                     Projects
                 </button>
-                <button className="hover-underline" onClick={handleClick('/about')}>
+                <button className="hover-underline text-3xl jersey-20" onClick={handleClick('/about')}>
                     About
                 </button>
             </div>

@@ -24,7 +24,7 @@ const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, new
             onClick={() => {posthog.capture(`Clicked button "${label}"`)}}
             target={newTab ? '_blank' : undefined}
             rel={newTab ? 'noreferrer' : undefined}
-            className={'hoverin w-full flex items-center justify-center py-2 rounded-md font-semibold ' + modifier}
+            className={'hoverin w-full flex items-center justify-center py-2 text-xl ' + modifier}
         >
             {label}
         </a>
@@ -32,7 +32,7 @@ const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, new
 
     return (
         <button onClick={onClick}
-            className={'hoverin w-full py-2 rounded-md text-white font-semibold bg-owaldron-blue' + modifier}
+            className={'hoverin w-full py-2 rounded-md text-white bg-owaldron-blue' + modifier}
         >
             {label}
         </button>

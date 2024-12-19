@@ -1,22 +1,38 @@
 import React, { FC, ReactNode } from "react";
+import styles from './Box.module.css';
 
 type BoxProps = {
     children: ReactNode;
+    label?: string;
     className?: string;
-    manualPadding?: boolean;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
+    leftButtons?: ReactNode;
 };
 
 const Box: FC<BoxProps> = ({ 
     children, 
+    label,
     className,
-    manualPadding = false,
-    onClick
+    onClick,
+    leftButtons
 }) => {
-    const paddingClass = " py-10 md:px-16 px-8 ";
-    const baseClass = "w-full bg-card-gray rounded-md border-card-border-gray border-[3px] " 
-    return <div onClick={onClick} className={baseClass + (manualPadding ? '' : paddingClass) + className} >
-        {children}
+    const hline = <hr className="border-[1px] border-card-border" />;
+
+    return <div onClick={onClick} className={styles['boxy-shadow'] + " flex flex-col w-full bg-card-bg border-card-border border-[2px] p-2 pt-0 " + className} >
+        <div className="py-1 flex w-full items-center gap-2">
+            {leftButtons && <div>
+                {leftButtons}
+            </div>}
+            <div className="flex gap-[2px] flex-col w-full">
+                {hline}
+                {hline}
+                {hline}
+            </div>
+            {label && <h2 className="my-[-2px] text-card-border whitespace-nowrap">{label}</h2>}
+        </div>
+        <div className="w-full border-card-border border-[2px] flex-1">
+            {children}
+        </div>
     </div>
 };
 

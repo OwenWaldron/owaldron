@@ -23,20 +23,13 @@ const ProjectCard: FC<ProjCardProps> = ({ project }) => {
     return (
         <Box 
             onClick={() => navigate('/projects/' + project.url)}
-            className={'p-6 md:w-[31%] md:h-[27rem] cursor-pointer ' + styles['proj-card']} 
-            manualPadding
+            className={'md:w-[31%] md:h-[25rem] cursor-pointer ' + styles['proj-card']} 
+            label="Project"
         >
-            <img className="rounded-sm border-black border-4 mb-4 w-full h-[50%] object-cover" src={project.images[0]} alt="" />
-            <h2 className="text-xl font-bold pb-1 max-h-[10%]">{project.name}</h2>
-            <p className="h-[28%] text-[0.95rem]" >{project.tldr}</p>
-            <div className="flex text-white font-bold mt-2 gap-1 h-[8%]">
-                {project.tags.map((tag, i) => {
-                    return (
-                        <h3 className="p-1 px-[0.7rem] bg-owaldron-blue rounded-2xl" key={i} >
-                            {tag}
-                        </h3>
-                    )
-                })}
+            <div className="w-full h-full p-4">
+                <img className="border-card-border border-2 mb-2 w-full h-[60%] object-cover" src={project.images[0]} alt="" />
+                <h2 className="text-3xl max-h-[10%] mb-2">{project.name}</h2>
+                <p className="text-[0.95rem]" >{project.tldr}</p>
             </div>
         </Box>
     )
