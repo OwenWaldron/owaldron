@@ -6,18 +6,23 @@ type BoxProps = {
     label?: string;
     className?: string;
     onClick?: React.MouseEventHandler<HTMLDivElement>;
+    leftButtons?: ReactNode;
 };
 
 const Box: FC<BoxProps> = ({ 
     children, 
     label,
     className,
-    onClick
+    onClick,
+    leftButtons
 }) => {
     const hline = <hr className="border-[1px] border-card-border" />;
 
     return <div onClick={onClick} className={styles['boxy-shadow'] + " flex flex-col w-full bg-card-bg border-card-border border-[2px] p-2 pt-0 " + className} >
         <div className="py-1 flex w-full items-center gap-2">
+            {leftButtons && <div>
+                {leftButtons}
+            </div>}
             <div className="flex gap-[2px] flex-col w-full">
                 {hline}
                 {hline}

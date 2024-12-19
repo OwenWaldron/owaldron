@@ -21,7 +21,7 @@ const AboutPage = () => {
                                 <Button label='Contact me' variant='hollow' href="mailto:owen.waldron@uwaterloo.ca" newTab />
                             </div>
                         </div>
-                        <img className="max-w-64 object-cover rounded-sm border-[3px] border-card-border-gray md:block hidden" src={Owen} alt="Me" />
+                        <img className="max-w-64 object-cover rounded-sm border-[3px] border-card-border md:block hidden" src={Owen} alt="Me" />
                     </div>
                 </Box>
                 <Box label="Education">
@@ -39,10 +39,6 @@ const AboutPage = () => {
     );
 }
 
-const Divider = () => {
-    return <hr className="h-[2px] w-full bg-black border-black mt-2 mb-6" />
-}
-
 type TagContentProps = { taggable: Taggable }
 const TagContent: FC<TagContentProps> = ({taggable}) => {
     return (
@@ -51,7 +47,7 @@ const TagContent: FC<TagContentProps> = ({taggable}) => {
                 <h2 className="text-2xl">
                     {taggable.title}
                 </h2>
-                <h3 className="font-bold text-sm">
+                <h3 className="text-lg">
                     {taggable.date}
                 </h3>
             </div>
