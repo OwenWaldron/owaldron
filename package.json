@@ -9,6 +9,7 @@
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "firebase": "^11.1.0",
     "posthog-js": "^1.194.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

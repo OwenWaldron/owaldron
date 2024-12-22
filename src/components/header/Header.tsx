@@ -12,12 +12,15 @@ const Header = () => {
                         Owen Waldron
                     </h1>
                 </Link>
-                <div className='flex gap-8 text-2xl'>
+                <div className='flex md:gap-8 gap-4 text-2xl'>
                     <Link className='hover-underline' to={'/projects'} >
                         Projects
                     </Link>
                     <Link className='hover-underline' to={'/about'} >
                         About
+                    </Link>
+                    <Link className='hover-underline' to={'/logbook'} >
+                        Logbook
                     </Link>
                 </div>
             </div>

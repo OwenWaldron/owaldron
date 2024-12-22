@@ -6,6 +6,7 @@ import ProjectPage from './routes/projects/ProjectPage';
 import ProjectView from './routes/projects/view/ProjectView';
 import AboutPage from './routes/about/AboutPage';
 import PostHogTracker from './posthog';
+import Logbook from './routes/logbook/Logbook';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/projects' element={ <ProjectPage /> } />
           <Route path='/projects/:name' element={ <ProjectView /> } />
           <Route path='/about' element={ <AboutPage /> } />
+          <Route path='/logbook' element={ <Logbook /> } />
         </Routes>
     </BrowserRouter>
   );
