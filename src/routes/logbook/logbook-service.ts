@@ -1,10 +1,11 @@
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase';
+import { Timestamp } from 'firebase/firestore';
+import { db } from '../../services/firebase';
 
 type LogSeed = {
     id?: string;
     seed: string;
-    timesent: Date;
+    timesent: Timestamp;
 }
 
 // Sha-256 function taken from:
@@ -30,4 +31,4 @@ const fetchSeeds = async () => {
 };
 
 export type { LogSeed };
-export { fetchSeeds };
+export { fetchSeeds, hashMessage };

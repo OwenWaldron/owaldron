@@ -1,0 +1,8 @@
+.mark-date {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mark-box:hover .mark-date {
+    opacity: 1;
+}
