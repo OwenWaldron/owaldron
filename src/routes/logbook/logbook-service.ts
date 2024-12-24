@@ -1,4 +1,4 @@
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
 import { Timestamp } from 'firebase/firestore';
 import { db } from '../../services/firebase';
 
@@ -30,5 +30,10 @@ const fetchSeeds = async () => {
     return gImageList
 };
 
+const uploadSeed = async (newSeed: LogSeed) => {
+    const docRef = await addDoc(collection(db, 'logs'), newSeed);
+    return docRef.id;
+}
+
 export type { LogSeed };
-export { fetchSeeds, hashMessage };
+export { fetchSeeds, hashMessage, uploadSeed };

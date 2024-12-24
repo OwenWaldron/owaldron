@@ -32,9 +32,9 @@ const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, new
 
     return (
         <button onClick={onClick}
-            className={'hoverin w-full py-2 rounded-md text-white bg-owaldron-blue' + modifier}
-        >
-            {label}
+            className={'hoverin w-full flex items-center justify-center py-2 text-xl' + modifier}
+        >   
+            <p className="text-2xl">{label}</p>
         </button>
     );
 };
