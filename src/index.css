@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Jersey 15';
+  src: local('Jersey 15'), url('./assets/fonts/Jersey15Custom.ttf') format('truetype');
+  size-adjust: 70%;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
+  /* shape-rendering: geometricPrecision; */
   
   background-color: theme('colors.owaldron-bg');
   font-family: "Jersey 15", sans-serif;

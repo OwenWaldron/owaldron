@@ -6,9 +6,9 @@ const Header = () => {
     return (
         <header className='flex mb-12 bg-header-gray border-b-4 border-header-accent text-white'>
             <div className='center flex justify-between items-end md:pb-4 pb-2'>
-                <Link to='/' className='flex flex-col items-center md:mt-8 mt-2 '>
+                <Link to='/' className='flex flex-col items-center md:mt-6 mt-2 '>
                     <img className='md:max-w-14 max-w-12' src={Owen} alt='' />
-                    <h1 className='text-white md:block hidden text-2xl'>
+                    <h1 className='text-white md:block hidden text-2xl text-[1.75rem]'>
                         Owen Waldron
                     </h1>
                 </Link>

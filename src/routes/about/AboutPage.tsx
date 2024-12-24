@@ -21,7 +21,7 @@ const AboutPage = () => {
                                 <Button label='Contact me' variant='hollow' href="mailto:owen.waldron@uwaterloo.ca" newTab />
                             </div>
                         </div>
-                        <img className="max-w-64 object-cover rounded-sm border-[3px] border-card-border md:block hidden" src={Owen} alt="Me" />
+                        <img className="max-w-52 object-cover rounded-sm border-[3px] border-card-border md:block hidden" src={Owen} alt="Me" />
                     </div>
                 </Box>
                 <Box label="Education">
