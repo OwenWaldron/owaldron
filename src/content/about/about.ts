@@ -1,8 +1,7 @@
 const aboutMeText = `
-My name is Owen Waldron, and I am a computer science student at Waterloo with a passion for exploring the intersection of technology,
-math, and physics. Whether I'm coding, solving complex problems, or enjoying activities like swimming and rock climbing, my curiosity
-and drive for self-improvement fuel everything I do. I’m also a proud cat enthusiast. I am always seeking new challenges and ways to
-grow in both my academic and personal life
+My name is Owen Waldron, and I am a computer science student at the University of Waterloo.
+I am proud cat enthousast with a passion for exploring the intersection of technology, math, and physics.
+I am always seeking new challenges and ways to grow in both my academic and personal life.
 `
 
 interface Taggable {
