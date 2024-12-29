@@ -1,4 +1,4 @@
-import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { collection, getDocs, addDoc, query, orderBy } from 'firebase/firestore';
 import { Timestamp } from 'firebase/firestore';
 import { db } from '../../services/firebase';
 
@@ -22,12 +22,13 @@ async function hashMessage(message: string) {
 
 const fetchSeeds = async () => {
     const galleryCollection = collection(db, 'logs');
-    const snapshot = await getDocs(galleryCollection);
-    const gImageList = snapshot.docs.map(doc => ({
+    const search = query(galleryCollection, orderBy('timesent', 'asc'));
+    const snapshot = await getDocs(search);
+    const logs = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
     } as LogSeed));
-    return gImageList
+    return logs
 };
 
 const uploadSeed = async (newSeed: LogSeed) => {
