@@ -18,6 +18,8 @@ const Logbook = () => {
     }, [])
 
     const sendMessage = async () => {
+        if (message === '') return;
+
         const hash = await hashMessage(message);
         setMessage('');
         const newSeed: LogSeed = {
