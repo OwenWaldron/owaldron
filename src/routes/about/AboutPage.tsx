@@ -43,17 +43,27 @@ type TagContentProps = { taggable: Taggable }
 const TagContent: FC<TagContentProps> = ({taggable}) => {
     return (
         <div>
-            <div className="flex justify-between md:flex-row flex-col">
-                <h2 className="text-2xl">
-                    {taggable.title}
-                </h2>
-                <h3 className="text-lg">
-                    {taggable.date}
-                </h3>
+            <div className="flex gap-4 md:pb-0 pb-3">
+                <a href={taggable.link} className="mt-auto mb-auto border-[2px] border-card-border md:block bg-white" target="_blank" rel="noreferrer" >
+                    <img src={taggable.image} className="md:w-12 md:h-12 w-16 h-16 max-w-16 object-cover" alt=""/>
+                </a>
+                <div className="w-full">
+                    <div className="flex justify-between md:flex-row flex-col w-full">
+                        <h2 className="md:text-2xl text-xl">
+                            {taggable.title}
+                        </h2>
+                        <h3 className="text-md md:block hidden">
+                            {taggable.date}
+                        </h3>
+                    </div>
+                    <a href={taggable.link} className="bg-owaldron-blue text-sm py-1 text-white px-2 mt-1 mb-2 rounded-xl w-fit">
+                        {taggable.tag}
+                    </a>
+                    <h3 className="text-md md:hidden">
+                        {taggable.date}
+                    </h3>
+                </div>
             </div>
-            <h3 className="bg-owaldron-blue text-sm text-white px-2 mt-1 mb-2 rounded-xl w-fit">
-                {taggable.tag}
-            </h3>
             <p>
                 {taggable.description}
             </p>
