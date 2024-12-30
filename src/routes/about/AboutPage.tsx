@@ -56,7 +56,7 @@ const TagContent: FC<TagContentProps> = ({taggable}) => {
                             {taggable.date}
                         </h3>
                     </div>
-                    <a className="bg-owaldron-blue text-sm py-1 text-white px-2 mt-1 mb-2 rounded-xl w-fit">
+                    <a href={taggable.link} className="bg-owaldron-blue text-sm py-1 text-white px-2 mt-1 mb-2 rounded-xl w-fit">
                         {taggable.tag}
                     </a>
                     <h3 className="text-md md:hidden">
