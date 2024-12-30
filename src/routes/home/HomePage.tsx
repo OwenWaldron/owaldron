@@ -30,6 +30,9 @@ const HomePage = () => {
                 <button className="hover-underline text-3xl jersey-20" onClick={handleClick('/about')}>
                     About
                 </button>
+                <button className="hover-underline text-3xl jersey-20" onClick={handleClick('/blog')}>
+                    Blog
+                </button>
                 <button className="hover-underline text-3xl jersey-20" onClick={handleClick('/logbook')}>
                     Logbook
                 </button>
