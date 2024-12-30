@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({ label, onClick, variant = 'filled', href, new
     let modifier = 'text-white  bg-owaldron-blue';
 
     if (variant === 'hollow') {
-        modifier = 'bg-none border-4 border-owaldron-blue text-owaldron-blue';
+        modifier = 'bg-white text-owaldron-blue';
     }
 
     if (href) return(
