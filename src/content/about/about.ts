@@ -1,8 +1,8 @@
 import * as images from './icons'
 
 const aboutMeText = `
-My name is Owen Waldron, and I study computer science student at the University of Waterloo.
-I am proud cat enthousast with a passion for exploring the intersection of technology, math, and physics.
+My name is Owen Waldron, and I study computer science at the University of Waterloo.
+I am a proud cat enthusiast with a passion for exploring the intersection of technology, math, and physics.
 My curious nature pushes me to new challenges and ways to grow in both my academic and personal life.
 `
 
