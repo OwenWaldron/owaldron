@@ -28,7 +28,7 @@ const ProjectCard: FC<ProjCardProps> = ({ project }) => {
         >
             <div className="w-full h-full p-4">
                 <img className="border-card-border border-2 mb-2 w-full h-[60%] object-cover" src={project.images[0]} alt="" />
-                <h2 className="text-3xl max-h-[10%] mb-2">{project.name}</h2>
+                <h1 className="text-3xl max-h-[10%] mb-2">{project.name}</h1>
                 <p className="text-[0.95rem]" >{project.tldr}</p>
             </div>
         </Box>

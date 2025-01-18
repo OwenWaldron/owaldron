@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PageContainer from "../../../components/page-container/PageContainer";
 import Box from "../../../components/box/Box";
 import { Link, useParams } from "react-router-dom";
 import projects from '../../../content/projects/projects';
+import OnButton from '../../../assets/images/radiobutton/buttonon.png'
+import OffButton from '../../../assets/images/radiobutton/buttonoff.png'
 
 const ProjectView = () => {
     let { name } = useParams();
+    const [tempIndex, setIndex] = useState(0);
 
     const project = projects.find(proj => proj.url === name);
 
@@ -14,6 +17,8 @@ const ProjectView = () => {
             Uh oh! Looks like this project doesn't exist...
         </h1>
     }
+
+    const index = tempIndex;
 
     return (
         <PageContainer>
@@ -26,8 +31,22 @@ const ProjectView = () => {
                 }
             >
                 <div className="flex flex-col items-center py-6 px-8">
-                    <h2 className="mb-4 text-3xl">{project.name}</h2>
-                    <img className="w-[42rem] md:h-[26rem] object-cover border-card-border border-4" src={project.images[0]} alt="" />
+                    <h1 className="mb-4 text-4xl">{project.name}</h1>
+                    <img 
+                     className="w-[42rem] md:h-[26rem] object-cover border-card-border border-4" 
+                     src={project.images[index]} alt="" 
+                     />
+                    <div className="flex gap-1 mt-2">
+                        {project.images.map((_, i) => 
+                            <img 
+                             key={i}
+                             style={{imageRendering: 'pixelated'}}
+                             className="cursor-pointer h-6"
+                             src={index === i ? OnButton : OffButton} 
+                             onClick={() => { setIndex(i) }}
+                             />
+                        )}
+                    </div>
                     <div className="flex mt-6 gap-8 md:flex-row flex-col">
                         <div>
                             <h2 className="text-2xl mb-2">Description</h2>
@@ -37,7 +56,11 @@ const ProjectView = () => {
                             <h2 className="text-2xl mb-2">Technologies</h2>
                             <div className="flex pl-4 text-white mb-4 gap-1">
                                 {project.tags.map((tag, i) => 
-                                    <strong key={i} className="bg-owaldron-blue font-normal w-fit px-2 py-[2px] rounded-xl">{tag}</strong>
+                                    <strong key={i} 
+                                     className="bg-owaldron-blue font-normal w-fit px-2 py-[2px] rounded-xl"
+                                     >
+                                        {tag}
+                                    </strong>
                                 )}
                             </div>
                             <h2 className="text-2xl">Links</h2>
