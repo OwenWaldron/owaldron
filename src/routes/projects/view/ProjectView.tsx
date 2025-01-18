@@ -9,6 +9,13 @@ import OffButton from '../../../assets/images/radiobutton/buttonoff.png'
 const ProjectView = () => {
     let { name } = useParams();
     const [tempIndex, setIndex] = useState(0);
+    const [cycling, setCycling] = useState(true);
+    const [check, setCheck] = useState(0);
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        if (cycling) setTimeout(() => setCounter(counter + 1), 3000)
+    }, [counter])
 
     const project = projects.find(proj => proj.url === name);
 
@@ -17,8 +24,9 @@ const ProjectView = () => {
             Uh oh! Looks like this project doesn't exist...
         </h1>
     }
-
-    const index = tempIndex;
+    
+    const dif = cycling ? counter - check : 0;
+    const index = (tempIndex + dif) % project.images.length;
 
     return (
         <PageContainer>
@@ -43,7 +51,7 @@ const ProjectView = () => {
                              style={{imageRendering: 'pixelated'}}
                              className="cursor-pointer h-6"
                              src={index === i ? OnButton : OffButton} 
-                             onClick={() => { setIndex(i) }}
+                             onClick={() => { setCycling(false); setIndex(i); setCheck(counter) }}
                              />
                         )}
                     </div>
