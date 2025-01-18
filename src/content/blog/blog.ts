@@ -1,4 +1,5 @@
 import * as art from './artworks';
+import * as articles from './articles';
 
 type Art = {
     contentType: 'art';
@@ -22,6 +23,8 @@ type Article = {
     title: string;
     tldr: string;
     date: string;
+    article: string;
+    url: string;
 }
 
 export type Content = Art | Quote | Article;
@@ -29,8 +32,8 @@ export type Content = Art | Quote | Article;
 export const BlogContent: Content[] = [
     {
         contentType: 'quote',
-        text: 'Sometimes, I like to write some quotes here. I like to read quotes.',
-        author: 'Owen Waldron',
+        text: 'Everything should be made as simple as possible, but no simpler.',
+        author: 'Albert Einstein (paraphrased)',
         date: ''
     },
     {
@@ -50,6 +53,8 @@ export const BlogContent: Content[] = [
             For my logbook, I wanted to create a randomly generated mark seeded by a user's input.
             This article outlines how the procedural generation works.
         `,
-        date: 'Dec 30, 2024'
+        date: 'Dec 30, 2024',
+        article: articles.Test,
+        url: 'test'
     }
 ]

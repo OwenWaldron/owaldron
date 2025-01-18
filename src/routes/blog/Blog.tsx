@@ -3,6 +3,7 @@ import PageContainer from "../../components/page-container/PageContainer";
 import Box from "../../components/box/Box";
 import { Masonry } from '@mui/lab';
 import { Content, BlogContent } from "../../content/blog/blog";
+import { useNavigate } from "react-router-dom";
 
 const BlogPage = () => {
     return <PageContainer>
@@ -26,7 +27,8 @@ type BlogItemProps = {
 }
 
 const BlogItem: FC<BlogItemProps> = ({ content }) => {
-    console.log(content.contentType)
+    const navigate = useNavigate();
+
     switch (content.contentType) {
         case 'art':
             return <Box label="Art">
@@ -38,7 +40,7 @@ const BlogItem: FC<BlogItemProps> = ({ content }) => {
                 </div>
             </Box>
         case 'article':
-            return <Box label="Article">
+            return <Box label="Article" onClick={() => navigate(`/blog/${content.url}`)} className="cursor-pointer">
                 <div className="p-4">
                     <h1 className="text-2xl">{content.title}</h1>
                     <p>{content.tldr}</p>

@@ -8,6 +8,7 @@ import AboutPage from './routes/about/AboutPage';
 import { Analytics } from "@vercel/analytics/react"
 import Logbook from './routes/logbook/Logbook';
 import BlogPage from './routes/blog/Blog';
+import ArticleView from './routes/blog/article/ArticleView';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/about' element={ <AboutPage /> } />
           <Route path='/logbook' element={ <Logbook /> } />
           <Route path='/blog' element={ <BlogPage /> } />
+          <Route path='/blog/:name' element={ <ArticleView /> } />
         </Routes>
         <Analytics />
     </BrowserRouter>
