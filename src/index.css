@@ -8,6 +8,12 @@
   size-adjust: 70%;
 }
 
+@font-face {
+  font-family: 'Jersey 25';
+  src: local('Jersey 55'), url('./assets/fonts/Jersey25Custom.ttf') format('truetype');
+  size-adjust: 70%;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: none;
@@ -48,16 +54,14 @@ code {
   font-style: normal;
 }
 
-.jersey-20 {
-  font-family: "Jersey 20", serif;
+.jersey-25 {
+  font-family: "Jersey 25", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-
-
 h1 {
-  font-family: "Jersey 20", serif;
+  font-family: "Jersey 25", serif;
   font-weight: 400;
   font-style: normal;
 }
